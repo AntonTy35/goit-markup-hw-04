@@ -232,30 +232,13 @@ body{
     width: calc((100% - (3 * 24px)) / 4);  
 }
 
-.feature-item::before{
-    content: '';
-    display: block;
+.feature-svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 112px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: var(--grey-bg-color);
-    border-radius: 4px;
-}
-
-.icon-antenna::before{
-    background-image: url('../images/antenna.svg');
-}
-
-.icon-clock::before{
-    background-image: url('../images/clock.svg');
-}
-
-.icon-diadram::before{
-    background-image: url('../images/diagram.svg');
-}
-
-.icon-astronaut::before{
-    background-image: url('../images/astronaut.svg');
+    padding: 24px 0;
 }
 
 .descr-title {
