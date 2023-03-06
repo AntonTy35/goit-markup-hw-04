@@ -228,19 +228,34 @@ body{
     column-gap: 24px;
 }
 
-.feature{
-    width: calc((100% - (3 * 24px)) / 4);
-    background-color: var(--grey-bg-color);    
+.feature-item{
+    width: calc((100% - (3 * 24px)) / 4);  
 }
 
-.feature-img{
-    padding: 24px 0 24px;
-    margin: auto;
+.feature-item::before{
+    content: '';
+    display: block;
+    height: 112px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--grey-bg-color);
+    border-radius: 4px;
 }
 
-.feature-content{
-    background-color: var(--primary-white-color);
-    padding-top: var(--margin-p-top);
+.icon-antenna::before{
+    background-image: url('../images/antenna.svg');
+}
+
+.icon-clock::before{
+    background-image: url('../images/clock.svg');
+}
+
+.icon-diadram::before{
+    background-image: url('../images/diagram.svg');
+}
+
+.icon-astronaut::before{
+    background-image: url('../images/astronaut.svg');
 }
 
 .descr-title {
@@ -248,6 +263,7 @@ body{
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+    margin-top: var(--margin-p-top);
 }
 
 .descr-text {
@@ -352,6 +368,7 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    padding: 12px;
     background-color: var(--title-btn-color);
 }
 
@@ -366,10 +383,11 @@ body{
 
 /* /Section 3 Our Team */
 
+/* Section 4 Customers */
+
 .section-customers {
     padding: 0;
     padding: 130px 0 var(--padding-top-bottom-section);
-
 }
 
 .customers {
@@ -388,30 +406,34 @@ body{
     column-gap: 24px;
     padding: 16px 0 16px;
 
-    border: lightslategray;
-    fill: var(--grey-bg-color);
+    /* border: lightslategray; */
+    /* fill: var(--grey-bg-color); */
 }
 
 .customers-item {
+    display: block;
     width: 168px;
     height: 88px;
-    outline: 2px dashed orange;
+    /* border: 1px solid var(--grey-bg-color); */
+    /* outline: 2px dashed orange; */
 }
 
 .customers-link {
+    padding: 16px 32px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
-
-    fill: var(--grey-bg-color);
     
 }
 
 .customers-icon {
-    fill: blue;
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    fill: #AFB1B8;
+    /* color: #8E8F99; */
 }
+/* /Section 4 Customers */
 
 /* Footer */
 .footer {
@@ -420,12 +442,15 @@ body{
 }
 
 .footer-container{
-    
+    display: flex;
+    column-gap: var(--padding-top-bottom-section);
+    margin-right: auto;
+}
+
+.footer-logo {
     max-width: 264px;
     margin: 0;
 }
-
-.footer-logo {}
 
 .footer-logo-white{
     color: var(--grey-bg-color);
@@ -440,6 +465,45 @@ body{
 
     margin-top: 16px;
 }
+
+.footer-social-media{}
+
+.footer-social-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-white-color);
+}
+
+.footer-social-list{
+    display: flex;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+}
+
+.footer-social-item:is(:hover, :focus){
+    background-color: green;
+}
+
+.footer-social-link {
+    display: block;
+}
+
+.footer-social-icon {
+    fill: var(--grey-bg-color);
+    width: 100%;
+    height: 100%;
+}
+
 /* /Footer */
 
 /* --------------------------------Portfolio---------------*/
