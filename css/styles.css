@@ -396,7 +396,6 @@ body {
   display: flex;
   justify-content: center;
   column-gap: 24px;
-  padding: 16px 0 16px;
 }
 
 .customers-item {
